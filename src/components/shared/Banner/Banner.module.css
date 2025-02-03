@@ -1,0 +1,7 @@
+.banner_container {
+    background: url("../../../assets/banner-img.png");;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+}
