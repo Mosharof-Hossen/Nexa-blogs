@@ -1,8 +1,17 @@
+import LatestBlogs from "@/components/LatestBlogs/LatestBlogs";
 
-export default function Home() {
+export default async function Home () {
+  const res = await fetch("http://localhost:5000/blogs",{
+    next:{
+      revalidate:30,
+    }
+  })
+
+  const blogs = await res.json();
+  console.log(blogs);
   return (
     <div className="my-10">
-      <h1 className="text-4xl text-center">Latest Blogsss</h1>
+      <LatestBlogs blogs={blogs}></LatestBlogs>
     </div>
   );
 }
