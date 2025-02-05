@@ -6,7 +6,6 @@ import { AiFillLike } from 'react-icons/ai';
 import { FaCalendar } from 'react-icons/fa';
 
 const BlogCard = ({ blog }: { blog: TBlog }) => {
-    console.log(blog);
     return (
         <div className='w-full bg-white shadow-lg rounded-lg overflow-hidden'>
             <figure>
